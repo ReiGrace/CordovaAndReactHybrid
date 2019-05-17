@@ -1,0 +1,193 @@
+@tech-blue: #e60012;
+@tech-red: #e60012;
+@tech-gray: #d9d9d9;
+
+// 公共
+.am-navbar {
+    background-color: @tech-red;
+}
+
+// 登录页
+.login-bg {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.login-bg .login-logo {
+    display: flex; // flex-basis: 150px;
+    flex-basis: 180px; // flex: 0.5;
+    flex-shrink: 1;
+    align-self: center; // margin-left: auto;
+    // margin-right: auto;
+    // flex-grow: 1;
+}
+
+.login-bg .login-logo img {
+    // width: 100px;
+    height: 150px;
+    align-self: flex-end;
+}
+
+.login-bg .login-title {
+    // flex: 0.4;
+    // flex-basis: 80px;
+    flex-basis: 30px;
+    flex-shrink: 1;
+    align-self: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.login-bg .login-title h1 {
+    font-family: '微软雅黑', 'Courier New', Courier, monospace;
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: center;
+    color: #fff;
+    margin: auto;
+}
+
+.login-bg .login-form {
+    // flex: 1.3;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-self: center;
+    margin: 0px 20px 0px 20px;
+}
+
+.login-bg .login-form .am-list-item.am-input-item.am-list-item-middle {
+    border: 1px solid @tech-gray;
+    border-radius: 8px;
+}
+
+.login-bg .login-form .am-list-item:not(:last-child) .am-list-line {
+    border-bottom: 1PX solid #fff !important;
+}
+
+.login-bg .login-form .am-list-item:not(:last-child) .am-list-line::after {
+    background-color: #fff;
+}
+
+.login-label {
+    font-size: 12px;
+    line-height: 13px;
+    margin: 10px 0;
+    color: rgba(0, 0, 0, .65);
+}
+
+.login-form input {
+    font-size: 14px;
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+}
+
+.login-btn {
+    margin-top: 20px;
+}
+
+.login-btn .am-button:first-child {
+    border: 1px solid @tech-red  !important;
+    background: @tech-red; // background-image: -webkit-linear-gradient(top, #CD0110, #CD0110);
+    color: #fff;
+    width: 100%;
+    height: 47px; // border-radius: 8px;
+    font-size: 17px; // margin-top: 20px;
+}
+
+// .login-btn .am-button:last-child {
+//     border: 1px solid @tech-red  !important;
+//     color: @tech-red;
+//     width: 100%;
+//     height: 47px;
+//     font-size: 17px;
+//     margin-top: 20px;
+// }
+
+.login-btn .am-button::before {
+    border: none !important;
+}
+
+.login-btn .am-button-ghost::before {
+    border: none !important;
+}
+
+.login-bg .login-copyright {
+    display: flex;
+    width: 100%;
+    flex-basis: 50px;
+    flex: 0.3;
+    flex-shrink: 1;
+    align-self: center;
+}
+
+.login-copyright .list-block-label {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: flex-end;
+}
+
+.login-bg .login-copyright .list-block-label p {
+    align-self: center; // color: #fff;
+    font-size: 12px;
+    margin-top: 5px;
+    color: gray;
+}
+
+// .login-bg .login-copyright .list-block-label p:nth-child(2) {
+//     margin-bottom: 10px;
+// }
+
+.login-bg .login-copyright .list-block-label p:last-child {
+    margin-bottom: 5px;
+    font-size: 10px;
+}
+
+.user-login-other {
+    margin-top: 24px;
+    line-height: 22px;
+}
+
+#color-input-red+label {
+    display: block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 2px;
+    left: 15px;
+    background: rgba(240, 84, 77, 1);
+}
+
+.my-checkbox {
+    .am-checkbox-agree {
+        display: inline-block;
+        margin-left: 0px;
+    }
+
+    .am-checkbox-inner {
+        border-radius: 2px;
+    }
+
+    .user-login-register {
+        padding-top: 12px;
+        font-size: 15px;
+
+        span {
+            color: @tech-red;
+            text-decoration: underline; // padding-bottom:1px; border-bottom:1px solid #14529a
+        }
+    }
+
+    .am-checkbox.am-checkbox-checked .am-checkbox-inner {
+        border-color: @tech-red;
+        background: @tech-red;
+    }
+}

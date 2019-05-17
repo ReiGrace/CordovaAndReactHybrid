@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>通用CAR混合框架</title>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+
+  <!-- 字体图标库 -->
+  <link rel="stylesheet" href="./libs/iconfont/iconfont.css">
+  <!-- https://github.com/ftlabs/fastclick 引入 FastClick 并且设置 html meta-->
+  <script type="application/javascript" src="./libs/ant-mobile/fastclick.js"></script>
+
+  <!-- 引入 Promise 的 fallback 支持 (部分安卓手机不支持 Promise) -->
+  <script>
+    if ("addEventListener" in document) {
+      document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+          FastClick.attach(document.body);
+        },
+        false
+      );
+    }
+    if (!window.Promise) {
+      document.writeln(
+        '<script src="./libs/ant-mobile/es6-promise.min.js"' +
+        ">" +
+        "<" +
+        "/" +
+        "script>"
+      );
+    }
+  </script>
+  <script src="./libs/labjs/labjs.min.js"></script>
+  <script type="text/javaScript">
+      $LAB
+        .script("cordova.js")
+        .script("./libs/jQuery/jquery-2.1.4.min.js")
+        .script("./libs/snow/SnowCore.js").wait()
+        .script("./libs/socketio/socket.io.js").wait()
+    </script>
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    touch-action: manipulation;
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    position: relative;
+  }
+
+  #app {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+</style>
+
+<body leftmargin=0 topmargin=0 oncontextmenu='return false' ondragstart='return false' onselectstart='return false'
+  onbeforecopy='return false'>
+
+  <div id="app">
+  </div>
+</body>
+
+</html>

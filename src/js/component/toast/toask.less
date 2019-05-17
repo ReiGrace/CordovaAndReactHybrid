@@ -1,0 +1,84 @@
+.com_toast_div {
+    position: fixed;
+    z-index: 999999999;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    padding: 5px 10px;
+    max-width: 160px;
+    border-radius: 5px;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+    color: #ddd;
+}
+.toast-info-show {
+    animation-name: TOAST-INFO-SHOW;
+    animation-timing-function: ease-in;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+.ui-dialog {
+    z-index: 999999998;
+
+    .input-number {
+        height: 30px;
+        text-indent: 5px;
+        border-radius: 4px;
+        outline: none;
+        border: 1px solid #E9E9E9;
+        display: inline-block;
+        width: calc(~'100% - 100px');
+    }
+
+    .inputBtn {
+        display: inline-block;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        width: 45px;
+        font-size: 18px;
+    }
+}
+.ui-dialog-bd {
+    border-bottom: 1px solid #E9E9E9;
+}
+.toast-confirm-show,
+.toast-input-show {
+    animation-name: TOAST-CONFIRM-SHOW;
+    animation-timing-function: ease-in;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes TOAST-INFO-SHOW {
+    0% {
+        opacity: 0;
+        top: 80%;
+    }
+    15% {
+        opacity: 0.6;
+        top: 70%;
+    }
+    30% {
+        opacity: 1;
+        top: 70%;
+    }
+    70% {
+        opacity: 1;
+        top: 55%;
+    }
+    100% {
+        opacity: 1;
+        top: 50%;
+    }
+}
+
+@keyframes TOAST-CONFIRM-SHOW {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

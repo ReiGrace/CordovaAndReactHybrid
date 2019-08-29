@@ -2,7 +2,7 @@ let Api = {};
 let isDebug = false;
 
 //APP接口地址
-Api.Common = isDebug ? "http://192.168.31.234:8888" : "http://www.ruimap.com:8060";
+Api.Common = isDebug ? "http://192.168.31.234:8888" : "";
 
 // 系统SQL服务通用接口
 Api.Sql = {};

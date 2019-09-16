@@ -10,6 +10,9 @@ export const FILE_UPLOAD_ACTION = 'FILE_UPLOAD_ACTION';
 export const GET_SQL_EXECUTE_OPEN = 'GET_SQL_EXECUTE_OPEN';
 export const POST_SQL_EXECUTE_OPEN = 'POST_SQL_EXECUTE_OPEN';
 
+export const XY_USER_PICKER = 'XY_USER_PICKER';
+export const CLEAN_XY_USER_PICKER = 'CLEAN_XY_USER_PICKER';
+
 const getDataSuccess = (json, success, type) => {
     return {
         json,
@@ -102,5 +105,16 @@ export const fileUploadAction = (params, success) => {
             .then(response => response.json())
             .then(json => dispatch(getDataSuccess(json, success, FILE_UPLOAD_ACTION)))
             .catch(error => console.log(error));
+    }
+}
+
+// 选择用户组件之间通信
+export const xyUserPickerAction = (params, success) => {
+    return dispatch => {
+        if (params.clean) {
+            dispatch(getDataSuccess(params, success, CLEAN_XY_USER_PICKER));
+        } else {
+            dispatch(getDataSuccess(params, success, XY_USER_PICKER));
+        }
     }
 }

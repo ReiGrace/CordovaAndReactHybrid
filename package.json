@@ -1,6 +1,6 @@
 {
-  "name": "com.car.www",
-  "displayName": "通用CAR混合框架",
+  "name": "com.zhcdjg.www",
+  "displayName": "智慧建工",
   "version": "1.0.0",
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "main": "index.js",
@@ -18,10 +18,26 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "dependencies": {
+    "@antv/f2": "^3.3.9",
+    "@ztree/ztree_v3": "^3.5.40",
     "antd-mobile": "^2.2.13",
     "babel-polyfill": "^6.26.0",
     "babel-runtime": "^6.26.0",
+    "com.lampa.startapp": "git+https://github.com/lampaa/com.lampa.startapp.git",
+    "coordtransform": "^2.1.2",
     "cordova-android": "^8.0.0",
+    "cordova-plugin-appavailability": "^0.4.2",
+    "cordova-plugin-backbutton": "^0.3.0",
+    "cordova-plugin-call": "file:cordova-plugin-call",
+    "cordova-plugin-camera": "^4.0.3",
+    "cordova-plugin-dialogs": "^2.0.1",
+    "cordova-plugin-faceid": "file:cordova-plugin-faceid",
+    "cordova-plugin-geolocation": "^4.0.2",
+    "cordova-plugin-office": "file:cordova-plugin-office",
+    "cordova-plugin-update-apk": "file:cordova-plugin-update-apk",
+    "cordova-plugin-vibration": "^3.1.0",
+    "cordova-plugin-video": "file:cordova-plugin-video",
+    "echarts": "^4.2.1",
     "immutable": "^3.8.1",
     "isomorphic-fetch": "^2.2.1",
     "moment": "^2.24.0",
@@ -41,7 +57,6 @@
     "socket.io-client": "^2.2.0"
   },
   "devDependencies": {
-    "cordova-plugin-whitelist": "^1.3.3",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.0",
     "babel-plugin-import": "^1.8.0",
@@ -51,6 +66,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "copy-webpack-plugin": "^4.0.1",
+    "cordova-plugin-whitelist": "^1.3.3",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
@@ -67,11 +83,24 @@
     "svg-sprite-loader": "^3.8.0",
     "url-loader": "^0.5.9",
     "webpack": "^2.6.1",
+    "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^2.5.0"
   },
   "cordova": {
     "plugins": {
-      "cordova-plugin-whitelist": {}
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-video": {},
+      "cordova-plugin-backbutton": {},
+      "cordova-plugin-camera": {},
+      "cordova-plugin-update-apk": {},
+      "cordova-plugin-dialogs": {},
+      "cordova-plugin-vibration": {},
+      "cordova-plugin-call": {},
+      "cordova-plugin-faceid": {},
+      "cordova-plugin-appavailability": {},
+      "com.lampa.startapp": {},
+      "cordova-plugin-geolocation": {},
+      "cordova-plugin-office": {}
     },
     "platforms": [
       "android"

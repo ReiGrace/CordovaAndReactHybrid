@@ -84,7 +84,7 @@
     "url-loader": "^0.5.9",
     "webpack": "^2.6.1",
     "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^2.5.0"
+    "webpack-dev-server": "^3.9.0"
   },
   "cordova": {
     "plugins": {
